@@ -1,0 +1,6 @@
+{
+  "version": "1.0.1",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.1/WeComGroupSender_Win7_x64.exe",
+  "sha256": "3b91f0142941bf47f58442c3d6bfde3828e8f9f79f8751e14e3638837f3dc20c",
+  "notes": "修复校准时把群发助手误识别成第二个企业微信窗口的问题，并加入在线更新。"
+}
