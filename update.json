@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.7/WeComGroupSender_Win7_x64.exe",
-  "sha256": "827caf690be53a5337f7b2e559d1d9235fa9da90a87316b6dfe6d319ab0eabfc",
-  "notes": "收藏菜单及三条内容首次识别后缓存位置，后续群复用；仍逐群核对群名并检查收藏窗口状态；运行时隐藏助手。请先单群预演验证。"
+  "version": "1.0.8",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.8/WeComGroupSender_Win7_x64.exe",
+  "sha256": "484e55bab4bf8bcf436b8e2170e60c216ca17971476144477f9fb95a25923fc0",
+  "notes": "修复激活企业微信时错误还原最大化窗口导致坐标偏移；仅最小化时恢复。按 WXWork.exe 识别窗口，焦点丢失或坐标落在标题栏时停止。更新后重新校准并单群预演。"
 }
