@@ -1,6 +1,6 @@
 {
-  "version": "1.0.8",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.8/WeComGroupSender_Win7_x64.exe",
-  "sha256": "484e55bab4bf8bcf436b8e2170e60c216ca17971476144477f9fb95a25923fc0",
-  "notes": "修复激活企业微信时错误还原最大化窗口导致坐标偏移；仅最小化时恢复。按 WXWork.exe 识别窗口，焦点丢失或坐标落在标题栏时停止。更新后重新校准并单群预演。"
+  "version": "1.0.9",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.9/WeComGroupSender_Win7_x64.exe",
+  "sha256": "4e973665e0a42179d8a9b66ca66a605810e79270ea6f6a72d0fa0798bf019acc",
+  "notes": "移除打开收藏前无条件 Esc；重做窗口实际点击区域检查，统一缩放坐标；搜索框自动识别，工具栏改为底部相对定位；合并蓝色编号等分散 OCR 文字后精确匹配。请重新校准三个位置一次，再单群预演。"
 }
