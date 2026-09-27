@@ -1,6 +1,6 @@
 {
-  "version": "1.0.6",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.6/WeComGroupSender_Win7_x64.exe",
-  "sha256": "4ad08f95ae3542e792826537c72a5d8984773566322cac98bb8dd1bcf599e527",
-  "notes": "运行时自动隐藏助手，防止遮挡企业微信；打开收藏前重新激活企业微信；收藏菜单失败自动保存截图。更新后先校准并预演单群。"
+  "version": "1.0.7",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.7/WeComGroupSender_Win7_x64.exe",
+  "sha256": "827caf690be53a5337f7b2e559d1d9235fa9da90a87316b6dfe6d319ab0eabfc",
+  "notes": "收藏菜单及三条内容首次识别后缓存位置，后续群复用；仍逐群核对群名并检查收藏窗口状态；运行时隐藏助手。请先单群预演验证。"
 }
