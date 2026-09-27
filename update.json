@@ -1,6 +1,6 @@
 {
-  "version": "1.0.9",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.9/WeComGroupSender_Win7_x64.exe",
-  "sha256": "4e973665e0a42179d8a9b66ca66a605810e79270ea6f6a72d0fa0798bf019acc",
-  "notes": "移除打开收藏前无条件 Esc；重做窗口实际点击区域检查，统一缩放坐标；搜索框自动识别，工具栏改为底部相对定位；合并蓝色编号等分散 OCR 文字后精确匹配。请重新校准三个位置一次，再单群预演。"
+  "version": "1.0.10",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.10/WeComGroupSender_Win7_x64.exe",
+  "sha256": "7b8c76ef8d4b905e7ba1e7c151d911fb9b053f599b5c0cfa549848938b52bf52",
+  "notes": "修复企业微信独立搜索弹窗被误判为其他窗口的问题。改为按进程识别搜索及收藏弹窗，保留遮挡和点击范围检查。本次保留原有校准，无需重新校准。"
 }
