@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.2/WeComGroupSender_Win7_x64.exe",
-  "sha256": "73fd941095e9b731e2a71c6cf2b2f3c461a7b6158c2f0477b8c7b9fb51a14c34",
-  "notes": "修复 Windows 7 本地 OCR 运行库加载，增加 OCR 自检按钮，并在日志中保留完整错误原因。"
+  "version": "1.0.3",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.3/WeComGroupSender_Win7_x64.exe",
+  "sha256": "a9e3bcb605f0adf75d084689addcad407e014be3169d47c5e08e65d3b579f97d",
+  "notes": "修复定时失败后反复重启；停止按钮和 F2 会关闭全部定时计划。内置更新证书包，保留 OCR 自检功能。"
 }
