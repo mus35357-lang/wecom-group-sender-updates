@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.1/WeComGroupSender_Win7_x64.exe",
-  "sha256": "3b91f0142941bf47f58442c3d6bfde3828e8f9f79f8751e14e3638837f3dc20c",
-  "notes": "修复校准时把群发助手误识别成第二个企业微信窗口的问题，并加入在线更新。"
+  "version": "1.0.2",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.2/WeComGroupSender_Win7_x64.exe",
+  "sha256": "73fd941095e9b731e2a71c6cf2b2f3c461a7b6158c2f0477b8c7b9fb51a14c34",
+  "notes": "修复 Windows 7 本地 OCR 运行库加载，增加 OCR 自检按钮，并在日志中保留完整错误原因。"
 }
