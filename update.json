@@ -1,6 +1,6 @@
 {
-  "version": "1.0.4",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.4/WeComGroupSender_Win7_x64.exe",
-  "sha256": "964ce6ff5e936a2d3930ebd12330f2bb42445d39fd46b70349d1cd17758d2bd5",
-  "notes": "替换误打包的新版运行库，修复 Win7 GetSystemTimePreciseAsFileTime 入口错误；修复 OTA 替换路径。更新后先运行 OCR 自检和安全预演。"
+  "version": "1.0.5",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.5/WeComGroupSender_Win7_x64.exe",
+  "sha256": "d925d118d447361371a396800216cfead14bd6c0e4deb036d2b422bda1e9ee84",
+  "notes": "收藏菜单重定位重试；局部 OCR 加速并隔离搜索结果和聊天标题；排除联系人和长编号近似群。更新后先预演单群，再验证正式发送。"
 }
