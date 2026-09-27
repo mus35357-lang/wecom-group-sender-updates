@@ -1,6 +1,6 @@
 {
-  "version": "1.0.10",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.10/WeComGroupSender_Win7_x64.exe",
-  "sha256": "7b8c76ef8d4b905e7ba1e7c151d911fb9b053f599b5c0cfa549848938b52bf52",
-  "notes": "修复企业微信独立搜索弹窗被误判为其他窗口的问题。改为按进程识别搜索及收藏弹窗，保留遮挡和点击范围检查。本次保留原有校准，无需重新校准。"
+  "version": "1.0.11",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.11/WeComGroupSender_Win7_x64.exe",
+  "sha256": "8cf9d624ee4cf0d828d084ccf287050c333d13500c4cff07263411762018b6a8",
+  "notes": "修复菜单已打开却识别失败的等待逻辑：展开后局部放大识别，慢速首帧未命中时至少读取第二帧；保留识别一次后缓存位置。失败记录实际识别画面、文字和耗时。保留原有校准。已通过截图复现和离线测试，尚未完成远端Win7现场发送验证。"
 }
