@@ -1,7 +1,7 @@
 {
-  "version": "1.0.14",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.14/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/594778780"],
-  "sha256": "ac0fbf7bc504734b1760d44f9980c8e446377620d105f0a15cf927e456d11a78",
-  "notes": "OTA专项修复，不修改群识别与发送逻辑：双官方入口检查、自动重试、备用下载入口、断点续传、防重复更新；下载和替换前双重SHA256校验；原子替换、占用重试、启动命令失败恢复旧文件；保留旧版备份、原data与详细日志。66项测试和85MB真实备用入口下载校验通过。旧版本若仍无法更新，请手动替换一次完整包并保留data；远端Win7实际网络需验证。"
+  "version": "1.0.15",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.15/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/594958740"],
+  "sha256": "54adcdc53c245ee67b1376bece20a51f245529e9f2cdf3864a71e1be1f5038b2",
+  "notes": "修复已进入A121却顶部核对失败：Win7黑色表情方框被OCR读为0。只读顶部标题行，局部放大完整标题重读，拼接分离文字框；不删真实尾数、不取消进群核对。失败日志显示实际读到的群名。保留v1.0.14 OTA、收藏缓存及发送进度。用户截图复现与真实数字反例通过，73项测试及打包检查通过；远端Win7真实发送仍需验证。"
 }
