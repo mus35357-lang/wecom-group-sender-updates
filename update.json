@@ -1,7 +1,7 @@
 {
-  "version": "1.0.15",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.15/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/594958740"],
-  "sha256": "54adcdc53c245ee67b1376bece20a51f245529e9f2cdf3864a71e1be1f5038b2",
-  "notes": "修复已进入A121却顶部核对失败：Win7黑色表情方框被OCR读为0。只读顶部标题行，局部放大完整标题重读，拼接分离文字框；不删真实尾数、不取消进群核对。失败日志显示实际读到的群名。保留v1.0.14 OTA、收藏缓存及发送进度。用户截图复现与真实数字反例通过，73项测试及打包检查通过；远端Win7真实发送仍需验证。"
+  "version": "1.0.16",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.16/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/594977414"],
+  "sha256": "b85e2fd56c3f5d02f9917e7c9b09a89ed1068b4befa8848b56556fcb5fed84e5",
+  "notes": "按要求取消顶部群名二次OCR核验：搜索结果精确匹配后点击，等待设置的操作间隔后直接继续收藏发送。保留A10/A100区分、窗口点击保护、F2停止、收藏特征缓存、发送进度与OTA。69项测试及打包检查通过，已断言点击后没有第二次群名OCR。运行时不要手动切换聊天；远端Win7实际速度仍需现场验证。"
 }
