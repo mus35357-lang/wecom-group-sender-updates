@@ -1,6 +1,6 @@
 {
-  "version": "1.0.11",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.11/WeComGroupSender_Win7_x64.exe",
-  "sha256": "8cf9d624ee4cf0d828d084ccf287050c333d13500c4cff07263411762018b6a8",
-  "notes": "修复菜单已打开却识别失败的等待逻辑：展开后局部放大识别，慢速首帧未命中时至少读取第二帧；保留识别一次后缓存位置。失败记录实际识别画面、文字和耗时。保留原有校准。已通过截图复现和离线测试，尚未完成远端Win7现场发送验证。"
+  "version": "1.0.12",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.12/WeComGroupSender_Win7_x64.exe",
+  "sha256": "7f0c47c459006d2eff4928fd3781ac6e26c403f14990e897e74efc21e99e24bf",
+  "notes": "收藏改为首次OCR学习、后续小图特征匹配；预演与正式运行共享模型和缓存，预演仅打开一次收藏。失配或窗口尺寸变化才重新学习。群名仍逐群精确核对。群发时推迟更新弹窗与重启；失焦记录具体窗口。保留原校准。39项测试和截图回放通过，尚未完成远端Win7真实发送验证。"
 }
