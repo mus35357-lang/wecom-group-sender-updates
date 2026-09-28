@@ -1,7 +1,7 @@
 {
-  "version": "1.0.16",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.16/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/594977414"],
-  "sha256": "b85e2fd56c3f5d02f9917e7c9b09a89ed1068b4befa8848b56556fcb5fed84e5",
-  "notes": "按要求取消顶部群名二次OCR核验：搜索结果精确匹配后点击，等待设置的操作间隔后直接继续收藏发送。保留A10/A100区分、窗口点击保护、F2停止、收藏特征缓存、发送进度与OTA。69项测试及打包检查通过，已断言点击后没有第二次群名OCR。运行时不要手动切换聊天；远端Win7实际速度仍需现场验证。"
+  "version": "1.0.17",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.17/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/595107631"],
+  "sha256": "91d9b6158c0f21b51566bf351bc9865fa164dc56f5c88e481e705f08bb19ff54",
+  "notes": "搜索提速：两位/三位编号分别学习蓝色编号和表情边界，后续仅识别编号小图；特征不符回退完整OCR，保留精确匹配。操作间隔支持0.1至8秒，可先改为0.3秒保存；原配置不覆盖。搜索不到精确匹配群时保存截图并跳过继续；窗口或发送异常仍停止。每次保存独立结果表、汇总和失败截图，新增打开结果按钮。保留无顶部核验、收藏缓存、发送进度和OTA。83项测试及真实截图回放通过，本机快速编号识别约0.02至0.04秒，远端Win7实际速度需验证。"
 }
