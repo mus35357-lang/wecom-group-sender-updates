@@ -1,6 +1,6 @@
 {
-  "version": "1.0.12",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.12/WeComGroupSender_Win7_x64.exe",
-  "sha256": "7f0c47c459006d2eff4928fd3781ac6e26c403f14990e897e74efc21e99e24bf",
-  "notes": "收藏改为首次OCR学习、后续小图特征匹配；预演与正式运行共享模型和缓存，预演仅打开一次收藏。失配或窗口尺寸变化才重新学习。群名仍逐群精确核对。群发时推迟更新弹窗与重启；失焦记录具体窗口。保留原校准。39项测试和截图回放通过，尚未完成远端Win7真实发送验证。"
+  "version": "1.0.13",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.13/WeComGroupSender_Win7_x64.exe",
+  "sha256": "2079272c7105bc07ff37f9ee6f9c577500c8364a03074d2055fe16d09a137e12",
+  "notes": "修复面包表情被误读成数字导致A113变成A1132：匹配失败后同帧去暖色表情并放大重读，保留真实黑色/蓝色尾数，不放宽编号规则。排除聊天记录中的同名结果。保留收藏特征缓存与原校准。45项测试、A113截图复现及A10/A100反例通过；尚未完成远端Win7实机验证。"
 }
