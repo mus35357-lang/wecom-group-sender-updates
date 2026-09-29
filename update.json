@@ -1,7 +1,7 @@
 {
-  "version": "1.0.17",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.0.17/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/595107631"],
-  "sha256": "91d9b6158c0f21b51566bf351bc9865fa164dc56f5c88e481e705f08bb19ff54",
-  "notes": "搜索提速：两位/三位编号分别学习蓝色编号和表情边界，后续仅识别编号小图；特征不符回退完整OCR，保留精确匹配。操作间隔支持0.1至8秒，可先改为0.3秒保存；原配置不覆盖。搜索不到精确匹配群时保存截图并跳过继续；窗口或发送异常仍停止。每次保存独立结果表、汇总和失败截图，新增打开结果按钮。保留无顶部核验、收藏缓存、发送进度和OTA。83项测试及真实截图回放通过，本机快速编号识别约0.02至0.04秒，远端Win7实际速度需验证。"
+  "version": "1.1.0",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.0/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/597728602"],
+  "sha256": "fd8c037c799fbbf3c15754c90f0ba03c56a566f14d0ea09eb56e49a44a7ac2dc",
+  "notes": "升级后先打开‘网站与话术设置’填写午餐/晚餐文字并保存。文字直接粘贴，小程序仍使用收藏；未配置文字会停止发送。网站连接默认关闭，服务器未部署时先使用本地文字；其他虚拟机不要填写127.0.0.1连接开发电脑。部署后可按企微昵称同步话术、上报结果/失败截图，支持全部或单账号失败补发，文字已发只补小程序。保留原群名识别、颜色特征提速、校准、计划、进度和OTA。107项自动化测试、本机打包OCR/TLS自检及Win7入口回归通过；目标Win7真实粘贴和补发仍需实机验证。"
 }
