@@ -1,7 +1,7 @@
 {
-  "version": "1.1.0",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.0/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/597728602"],
-  "sha256": "fd8c037c799fbbf3c15754c90f0ba03c56a566f14d0ea09eb56e49a44a7ac2dc",
-  "notes": "升级后先打开‘网站与话术设置’填写午餐/晚餐文字并保存。文字直接粘贴，小程序仍使用收藏；未配置文字会停止发送。网站连接默认关闭，服务器未部署时先使用本地文字；其他虚拟机不要填写127.0.0.1连接开发电脑。部署后可按企微昵称同步话术、上报结果/失败截图，支持全部或单账号失败补发，文字已发只补小程序。保留原群名识别、颜色特征提速、校准、计划、进度和OTA。107项自动化测试、本机打包OCR/TLS自检及Win7入口回归通过；目标Win7真实粘贴和补发仍需实机验证。"
+  "version": "1.1.1",
+  "url": "https://cps.agi687.com/downloads/v1.1.1/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.1/WeComGroupSender_Win7_x64.exe", "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/600402772"],
+  "sha256": "495211edde3e6f37563008bbf6b503595a716fd283dec6bfa9af7b63f00cd6a7",
+  "notes": "管理网站 cps.agi687.com 已内置。打开企微并保持昵称完整可见，自动识别名称并申请接入；首次到网站‘企微账号’核对并允许接入，再分配午餐/晚餐话术。不需填写网址、密钥或设备码。文字直接粘贴，小程序仍用收藏；支持上报结果、失败截图和失败补发。F2停止后，在设置取消暂停网站补发可恢复。OTA优先本站、GitHub备用，保留续传、校验、旧版备份；网站提供固定下载地址 /download。保留计划、校准、data和原群名识别算法。100项客户端测试、21项服务器测试及打包OCR/TLS和Win7入口检查通过；未执行真实群发，Win7实机发送仍需验证。"
 }
