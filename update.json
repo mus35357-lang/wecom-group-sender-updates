@@ -1,7 +1,7 @@
 {
-  "version": "1.1.1",
-  "url": "https://cps.agi687.com/downloads/v1.1.1/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.1/WeComGroupSender_Win7_x64.exe", "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/600402772"],
-  "sha256": "495211edde3e6f37563008bbf6b503595a716fd283dec6bfa9af7b63f00cd6a7",
-  "notes": "管理网站 cps.agi687.com 已内置。打开企微并保持昵称完整可见，自动识别名称并申请接入；首次到网站‘企微账号’核对并允许接入，再分配午餐/晚餐话术。不需填写网址、密钥或设备码。文字直接粘贴，小程序仍用收藏；支持上报结果、失败截图和失败补发。F2停止后，在设置取消暂停网站补发可恢复。OTA优先本站、GitHub备用，保留续传、校验、旧版备份；网站提供固定下载地址 /download。保留计划、校准、data和原群名识别算法。100项客户端测试、21项服务器测试及打包OCR/TLS和Win7入口检查通过；未执行真实群发，Win7实机发送仍需验证。"
+  "version": "1.1.4",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.4/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614342779"],
+  "sha256": "3492363d26a4f57f75c2ec115edb51ab7c84c1e6a5f1ccd69d468e179aa69f4e",
+  "notes": "新增最近列表批量转发手动入口：先在计划首群手动发消息并右键打开转发，软件滚动最近列表、匹配勾选其他目标，排除首群。文字和小程序各运行一次；不是自动串联两段转发。新增独立核对目标群按钮，只搜索、报告可能未找到的群，不发送。每屏小范围OCR与编号小块核对，滚动去重；缺失群记录跳过，无法核实已选人数时保留窗口供人工处理。转发结果仅存本机，不纳入网站自动补发。保留原逐群定时、网站同步、补发与配置。133项测试、实际截图离线回放、Win7打包入口及OCR/TLS自检通过，尚未在目标Win7机真实转发验证。本站下载目录待宝塔登录后同步，当前通过GitHub及API备用线路更新。"
 }
