@@ -1,10 +1,7 @@
 {
-  "version": "1.1.6",
-  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.6.exe",
-  "urls": [
-    "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.6/WeComGroupSender_v1.1.6.exe",
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614724948"
-  ],
-  "sha256": "969ccdbf58b7602cfe0700c5c6f71cafe40754cfa534512634bc6887334db8ba",
-  "notes": "收藏只检查小程序，不要求午晚文字收藏；午晚全流程预演分别粘贴真实话术、清空草稿、检查小程序并取消，不发送。独立10秒轻量心跳，发送中保持在线，正常心跳不刷日志；任务开始同步话术。更新文件名带版本号，外部控制器在新版启动确认后删除本次旧EXE并保留数据。保留逐群发送，不含批量转发。客户端123项及网站48项测试、打包自检和控制器交接测试通过；Win7实际界面仍需现场预演。"
+  "version": "1.1.7",
+  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.7.exe",
+  "urls": [],
+  "sha256": "12adb68abb22036b6961fc814b7ac54f5bdb428545aae666480315250ad82bc1",
+  "notes": "修复午晚预演只测首群：按每条计划的完整范围逐群搜索、粘贴实际话术并清空、检查收藏小程序后取消，不发送。午晚各50群即检查100群次。缺群记录失败后继续，保存逐群CSV/JSON、汇总和失败截图；无法安全恢复时明确列出未检查群。每计划同步一次话术，预演不计入正式发送记录。保留v1.1.6心跳及更新控制器。132项测试、打包检查和OCR/TLS/Tk自检通过；Win7实机仍需现场预演。"
 }
