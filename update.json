@@ -1,7 +1,7 @@
 {
-  "version": "1.1.7",
-  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.7.exe",
+  "version": "1.1.8",
+  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.8.exe",
   "urls": [],
-  "sha256": "12adb68abb22036b6961fc814b7ac54f5bdb428545aae666480315250ad82bc1",
-  "notes": "修复午晚预演只测首群：按每条计划的完整范围逐群搜索、粘贴实际话术并清空、检查收藏小程序后取消，不发送。午晚各50群即检查100群次。缺群记录失败后继续，保存逐群CSV/JSON、汇总和失败截图；无法安全恢复时明确列出未检查群。每计划同步一次话术，预演不计入正式发送记录。保留v1.1.6心跳及更新控制器。132项测试、打包检查和OCR/TLS/Tk自检通过；Win7实机仍需现场预演。"
+  "sha256": "d27c9a1873a701c11e79e350a460f22a92c1da75b666a5d3b693412bd28a84fd",
+  "notes": "修复Win7旧.NET环境更新控制器报SHA256Managed缺少Dispose方法：改为兼容的Clear/Close，保留SHA256验证与启动确认。午晚全量逐群预演不变。重要：已运行1.1.6/1.1.7且更新控制器失败的电脑，本次须手动下载1.1.8，关闭旧程序后放在旧程序旁边启动，保留data文件夹，不要在data/updates内运行。135项测试和打包自检通过；尚未在你的Win7实机验证下一次自动替换。"
 }
