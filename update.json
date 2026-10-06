@@ -1,7 +1,7 @@
 {
-  "version": "1.1.4",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.4/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614342779"],
-  "sha256": "3492363d26a4f57f75c2ec115edb51ab7c84c1e6a5f1ccd69d468e179aa69f4e",
-  "notes": "新增最近列表批量转发手动入口：先在计划首群手动发消息并右键打开转发，软件滚动最近列表、匹配勾选其他目标，排除首群。文字和小程序各运行一次；不是自动串联两段转发。新增独立核对目标群按钮，只搜索、报告可能未找到的群，不发送。每屏小范围OCR与编号小块核对，滚动去重；缺失群记录跳过，无法核实已选人数时保留窗口供人工处理。转发结果仅存本机，不纳入网站自动补发。保留原逐群定时、网站同步、补发与配置。133项测试、实际截图离线回放、Win7打包入口及OCR/TLS自检通过，尚未在目标Win7机真实转发验证。本站下载目录待宝塔登录后同步，当前通过GitHub及API备用线路更新。"
+  "version": "1.1.5",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.5/WeComGroupSender_Win7_x64.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614416571"],
+  "sha256": "cefd8006603c44e96c2dccb000753c3c35bc43c7d5da6c038aa8b81149a92a15",
+  "notes": "恢复原逐群发送：撤回 v1.1.4 的批量转发与独立核对入口，不再使用最近列表批量转发。保留逐群搜索、粘贴话术、收藏小程序、网站同步、定时计划及原配置和发送记录。版本号递增到 v1.1.5 仅为让已经升级 v1.1.4 的电脑收到回退 OTA。115项测试、打包检查及OCR/TLS自检通过；通过GitHub/API备用线路提供更新，主站下载目录尚未同步。"
 }
