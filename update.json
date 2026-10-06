@@ -1,7 +1,10 @@
 {
-  "version": "1.1.5",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.5/WeComGroupSender_Win7_x64.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614416571"],
-  "sha256": "cefd8006603c44e96c2dccb000753c3c35bc43c7d5da6c038aa8b81149a92a15",
-  "notes": "恢复原逐群发送：撤回 v1.1.4 的批量转发与独立核对入口，不再使用最近列表批量转发。保留逐群搜索、粘贴话术、收藏小程序、网站同步、定时计划及原配置和发送记录。版本号递增到 v1.1.5 仅为让已经升级 v1.1.4 的电脑收到回退 OTA。115项测试、打包检查及OCR/TLS自检通过；通过GitHub/API备用线路提供更新，主站下载目录尚未同步。"
+  "version": "1.1.6",
+  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.6.exe",
+  "urls": [
+    "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.6/WeComGroupSender_v1.1.6.exe",
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/614724948"
+  ],
+  "sha256": "969ccdbf58b7602cfe0700c5c6f71cafe40754cfa534512634bc6887334db8ba",
+  "notes": "收藏只检查小程序，不要求午晚文字收藏；午晚全流程预演分别粘贴真实话术、清空草稿、检查小程序并取消，不发送。独立10秒轻量心跳，发送中保持在线，正常心跳不刷日志；任务开始同步话术。更新文件名带版本号，外部控制器在新版启动确认后删除本次旧EXE并保留数据。保留逐群发送，不含批量转发。客户端123项及网站48项测试、打包自检和控制器交接测试通过；Win7实际界面仍需现场预演。"
 }
