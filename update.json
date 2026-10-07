@@ -1,14 +1,14 @@
 {
-  "sha256": "385b95e816dc765e53213933d9d89cfbead0644b827a8c79546c1135caa46727",
-  "notes": "新增“快速识别列表”：所有计划按群编号去重，每个群独立一行；同账号、同企微窗口尺寸和布局下，午晚共用已有快速记忆，无需分别记录。\n\n列表展示快速坐标状态、窗口内坐标、共用计划、记录时间、最近结果和最近失败。选中群后可查看历史及打开失败截图，后续成功不会清除过去的错误记录。旧版没有账号标记的历史会单独注明。\n\n新增选中群 F8 校准：自动搜索编号后，将鼠标指向正确结果的群编号文字中心，按 F8 保存坐标和小图；不依赖 OCR 确认，不点击群、不发送。原来的统一特征1/2和三个位置校准不变。\n\n新增快速点击测试：只搜索并使用现有记录点击目标群，不执行 OCR、不粘贴、不发送。记录不存在、尺寸/特征变化或小图不一致时明确报未命中，不假装快速成功。正式任务仍保留识别回退，防止旧坐标盲点错群。\n\n单群预演、快速校准与测试均保存逐群结果；失败时保存截图。保留 F2 / Ctrl+Alt+F12 停止。所有操作仍需在实际虚拟机验证，自动测试不发送企业微信消息。\n\n支持小包更新；仅发布 GitHub OTA，不修改宝塔或网站。\n",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617653919"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617858667"
   ],
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.15/WeComGroupSender_scripts_v1.1.15.zip",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.16/WeComGroupSender_scripts_v1.1.16.zip",
     "runtime": "win7-py38-1",
-    "sha256": "882a2e779d9a5a19bfc53f5a6c44d60b8751150c098674c9a0a118d0ad627513"
+    "sha256": "c497607f99eda7a34663977f6c0325f47df1660a5bd3930029c73f4bdf3058ba"
   },
-  "version": "1.1.15",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.15/WeComGroupSender_v1.1.15.exe"
+  "version": "1.1.16",
+  "sha256": "fec49d116f35d91b1196d50edbd21fef6fa945d4aeaee7ed37ab5402b147f50b",
+  "notes": "新增“快速识别列表 → 快速识别检测”：检测所有计划中的群，午晚重复编号只查一次。已记录的复测快速命中；未记录或确认次数不足的补做完整搜索确认，再复测保存记录，每群最多三轮。修复已有搜索特征分支不累计逐群坐标确认次数的问题。\n\n午晚全量预演改成只搜索，同样补齐和复测快速记录。不点击进入群聊，不粘贴或清空草稿，不打开收藏，不发送，也不要求分配话术。单群预演、选中群 F8 校准和单群快速点击测试保留原功能。\n\n结果区分：快速通过、已找到但记录未就绪、失败、未检查。保存逐群 CSV/JSON/汇总及问题截图，并在快速识别列表展示。未找到某群继续检查后续群；窗口焦点等异常停止，F2 / Ctrl+Alt+F12 可停止。\n\n列表第三个按钮新增“自动排除干扰项（退群）”：点击后搜索所选编号，仅处理同前缀、符合统一群名特征且不在任何计划内的群。所有计划（包括停用计划）均保护；H1/H01 视为同一受保护编号，H100 不会因搜索 H10 被误退。不弹额外清单、不逐个二次搜索；每退一个等待4秒，再重新搜索原编号。确认框群名不符、窗口状态异常或结果不明则停止，不重复确认。保留企微默认“清空聊天记录”勾选，退群和清空记录不能自动恢复；此入口不会被定时发送或预演自动调用。\n\n列表后台识别并缓存最近失败截图：只将实际群聊搜索区的多个结果标记为多结果干扰；单个结果、焦点失败或截图无法确认不冒充干扰。多个结果都在计划内会标注均受保护。历史截图仅作展示，退群始终使用本次新搜索结果。隐藏或看不清的结果不保证已排除，会在报告中注明。\n\n快速路径仍保留小图校验，避免列表变化时点击旧坐标。需在实际虚拟机验证；自动测试没有发送消息或退出真实群。本次仅发布 GitHub OTA 小包与完整包，不修改宝塔或网站。\n",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.16/WeComGroupSender_v1.1.16.exe"
 }
