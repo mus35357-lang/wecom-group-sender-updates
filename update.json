@@ -1,14 +1,14 @@
 {
-  "sha256": "d5f566db76a106b0de3913c39c096b97ce42f95bac463854e9139cf02c8e2094",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617966824"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618047729"
   ],
-  "version": "1.1.17",
+  "sha256": "54a19a8d006184a4811fcc29720c09e80d950d4635d454691e94645bf016cf31",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.18/WeComGroupSender_v1.1.18.exe",
   "script": {
     "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.17/WeComGroupSender_scripts_v1.1.17.zip",
-    "sha256": "ce6cd7793452cf82dcdff082d5ee20e912d87a3fd7efcc16b53e054c16c373e5"
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.18/WeComGroupSender_scripts_v1.1.18.zip",
+    "sha256": "802750347cca2dc9266eab496a7f967b8c6cd89bbe6577bb6b6b06548d06f39e"
   },
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.17/WeComGroupSender_v1.1.17.exe",
-  "notes": "修复自动排除干扰项进入群聊后，三点菜单一次定位失败就停止的问题。正常找到菜单立即继续；暂未找到或不唯一时，只重新截图，最多补试五次，每次间隔0.4秒，不重复搜索、进群或提交退群。窗口位置变化或停止快捷键触发时中止。\n\n如果仍无法唯一定位，保存实际定位失败的最后一帧、候选数量和尝试次数；结果弹窗直接显示失败截图路径，不再用稍后画面替代失败帧。\n\n继续保护所有计划内的群，保留退出确认框的目标一致性检查、默认清空聊天记录勾选和每次退出后的4秒等待。退群不会由预演或定时发送自动触发。\n\n237项自动测试及用户截图模拟回放通过，没有退出真实群。此版本针对瞬时菜单定位失败增加恢复和诊断，仍需在实际虚拟机验证。本次仅发布GitHub小包OTA与完整包，不修改宝塔及网站。\n"
+  "version": "1.1.18",
+  "notes": "按搜索结果从上往下执行干扰排查：受保护群跳过，继续检查下一条；遇到当前目标群即结束，不处理目标后面的群。目标前的群只有满足同前缀、统一群名特征、所有计划以外的退群标准才退出。每退一个等待4秒，重新搜索原编号。无法确认的条目停止，不盲退。例如H100（保护）→H113（干扰）→H11（目标），只退H113；变成H100→H11后结束。\n\n取消进入群聊后在退出确认框再次比对群名的逻辑，只在本次搜索结果页判断资格。进群后只定位菜单、退出和确认按钮。继续保留全部计划内群保护、窗口/焦点检查、停止快捷键、默认清空聊天记录勾选；不由预演或定时任务自动退群。退出确认框定位异常会保存实际帧和OCR诊断。\n\n自动更新由每30分钟改为每60秒空闲检查，启动约3秒后首次检查。优先GitHub小包入口，随后API和原网站备用；每个检查入口超时从10秒降为5秒。小包下载后等待任务/同步完成或弹窗关闭再自动生效，并显示等待原因；不会中断群发或丢弃未保存的计划。\n\n本次发布GitHub小包OTA及完整备用包，不改宝塔。自动测试与用户截图离线回放通过；未操作真实群，实际虚拟机效果仍需验证。\n"
 }
