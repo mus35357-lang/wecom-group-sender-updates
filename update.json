@@ -1,14 +1,14 @@
 {
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.14/WeComGroupSender_v1.1.14.exe",
-  "notes": "群名特征改为计划列表下方的独立统一区块，仅保留特征1、特征2；所有午晚计划、单群/全量预演及重试共用，不再每条计划重复设置。\n\n两个特征各有预演校准按钮：输入真实群编号，确认搜索结果后按F8保存；只记录，不点击群、不发送。保留原来的三个位置校准和已有分类校准样本。\n\n旧版逐计划特征自动合并去重到两个共享位置，旧配置值另行保留；增加、删除和排序计划不改变共享特征。没有改动群搜索算法。\n\n支持兼容运行环境的小包更新；本次只发布GitHub OTA，不修改宝塔和网站。\n",
+  "sha256": "385b95e816dc765e53213933d9d89cfbead0644b827a8c79546c1135caa46727",
+  "notes": "新增“快速识别列表”：所有计划按群编号去重，每个群独立一行；同账号、同企微窗口尺寸和布局下，午晚共用已有快速记忆，无需分别记录。\n\n列表展示快速坐标状态、窗口内坐标、共用计划、记录时间、最近结果和最近失败。选中群后可查看历史及打开失败截图，后续成功不会清除过去的错误记录。旧版没有账号标记的历史会单独注明。\n\n新增选中群 F8 校准：自动搜索编号后，将鼠标指向正确结果的群编号文字中心，按 F8 保存坐标和小图；不依赖 OCR 确认，不点击群、不发送。原来的统一特征1/2和三个位置校准不变。\n\n新增快速点击测试：只搜索并使用现有记录点击目标群，不执行 OCR、不粘贴、不发送。记录不存在、尺寸/特征变化或小图不一致时明确报未命中，不假装快速成功。正式任务仍保留识别回退，防止旧坐标盲点错群。\n\n单群预演、快速校准与测试均保存逐群结果；失败时保存截图。保留 F2 / Ctrl+Alt+F12 停止。所有操作仍需在实际虚拟机验证，自动测试不发送企业微信消息。\n\n支持小包更新；仅发布 GitHub OTA，不修改宝塔或网站。\n",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617522263"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617653919"
   ],
-  "version": "1.1.14",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.14/WeComGroupSender_scripts_v1.1.14.zip",
-    "sha256": "e3a25faa82707afd9573ce5b2fb3de7a9d599cebc95a913deb8eb6b55154407b",
-    "runtime": "win7-py38-1"
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.15/WeComGroupSender_scripts_v1.1.15.zip",
+    "runtime": "win7-py38-1",
+    "sha256": "882a2e779d9a5a19bfc53f5a6c44d60b8751150c098674c9a0a118d0ad627513"
   },
-  "sha256": "4c5bc9a9c3fe8f08b6aafdaaf817e769906cea1959450df10987756f4d50c526"
+  "version": "1.1.15",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.15/WeComGroupSender_v1.1.15.exe"
 }
