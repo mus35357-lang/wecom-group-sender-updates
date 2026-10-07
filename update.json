@@ -1,14 +1,14 @@
 {
-  "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618047729"
-  ],
-  "sha256": "54a19a8d006184a4811fcc29720c09e80d950d4635d454691e94645bf016cf31",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.18/WeComGroupSender_v1.1.18.exe",
+  "version": "1.1.19",
   "script": {
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.19/WeComGroupSender_scripts_v1.1.19.zip",
     "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.18/WeComGroupSender_scripts_v1.1.18.zip",
-    "sha256": "802750347cca2dc9266eab496a7f967b8c6cd89bbe6577bb6b6b06548d06f39e"
+    "sha256": "c6abbbeded474fb78973e197185f6c0b209295bb04875ce6244facc7046747b6"
   },
-  "version": "1.1.18",
-  "notes": "按搜索结果从上往下执行干扰排查：受保护群跳过，继续检查下一条；遇到当前目标群即结束，不处理目标后面的群。目标前的群只有满足同前缀、统一群名特征、所有计划以外的退群标准才退出。每退一个等待4秒，重新搜索原编号。无法确认的条目停止，不盲退。例如H100（保护）→H113（干扰）→H11（目标），只退H113；变成H100→H11后结束。\n\n取消进入群聊后在退出确认框再次比对群名的逻辑，只在本次搜索结果页判断资格。进群后只定位菜单、退出和确认按钮。继续保留全部计划内群保护、窗口/焦点检查、停止快捷键、默认清空聊天记录勾选；不由预演或定时任务自动退群。退出确认框定位异常会保存实际帧和OCR诊断。\n\n自动更新由每30分钟改为每60秒空闲检查，启动约3秒后首次检查。优先GitHub小包入口，随后API和原网站备用；每个检查入口超时从10秒降为5秒。小包下载后等待任务/同步完成或弹窗关闭再自动生效，并显示等待原因；不会中断群发或丢弃未保存的计划。\n\n本次发布GitHub小包OTA及完整备用包，不改宝塔。自动测试与用户截图离线回放通过；未操作真实群，实际虚拟机效果仍需验证。\n"
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618156250"
+  ],
+  "sha256": "3752fb1bbf93ab9a0cd27a756f9a78b39c78be0a988da6634cb6a20e05cc7013",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.19/WeComGroupSender_v1.1.19.exe",
+  "notes": "v1.1.19\n\n- 修复退群排查时搜索列表中 H111 等蓝色短群号被原尺寸 OCR 漏读、显示“无法确认”的问题。只对目标前第一条无法确认的结果，在同一搜索截图上放大补识别；两次群号必须一致且满足原有置信度及文字特征要求，不猜数字、不放宽保护范围。\n- 单独的时间、日期和信息图标不再拉低群名识别分数。补识别不重复搜索，不增加进群后的群名核对。\n- 保持搜索列表从上往下处理：保护范围内跳过，遇到目标群结束；每退出一个群等待 4 秒重新搜索，保留默认清空聊天记录；不确定或 F2 停止时不继续点击。\n- 保持启动检查、空闲时每 60 秒检查更新和脚本小包自动更新。只发布 GitHub OTA，不修改宝塔或网站。\n\n验证：用户 H111 原图已复现旧失败并通过新逻辑回放，单元测试及离线打包验证不执行真实群发或退群；远程电脑上的实际退群仍需现场验证。\n"
 }
