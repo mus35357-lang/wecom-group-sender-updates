@@ -1,14 +1,14 @@
 {
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.13/WeComGroupSender_v1.1.13.exe",
-  "script": {
-    "sha256": "a7067df41b23fc93c313e149eabd8d4af7191dc2ebee257e74edb796b9edd0d3",
-    "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.13/WeComGroupSender_scripts_v1.1.13.zip"
-  },
-  "notes": "修复搜索区域错误裁切导致可见群名被误判未找到：优先按实际搜索弹层边界识别，备用路径校验分类标题与全局搜索入口，取消依赖搜索框点击点的固定裁切。A/Y/H 等前缀使用同一流程；保持完整编号边界，排除 A100/H010 等近似群，不增加进群顶部 OCR。\n\n客户端每条计划下方增加群名特征 1/2（任选匹配，留空不限）与预演校准。编号作为变量；自动搜索样例，确认第一条正确后 F8 保存；其他行可指向群名文字再按 F8。原三个位置校准保留。账号、窗口尺寸、前缀和数字位数分别记录特征，追加 VIP 不覆盖 A；预演、正式发送共用匹配逻辑。\n\nF2 改为独立线程全局热键，增加 Ctrl+Alt+F12 备用。收到停止先设置标志，不等待写配置；OCR 等待可取消，迟到结果丢弃，停止后输入/点击/回车均拦截。未提交的草稿可能保留，需人工检查；已提交的发送无法撤回。远程按键需要传入虚拟机。\n\n失败截图旁保存识别区域、原始 OCR 和错误类型，区分定位失败与无精确匹配。v1.1.12 可自动接收兼容脚本小包，空闲安全切换；保留完整 EXE 后备。仅发布 GitHub OTA，不修改宝塔和网站。\n\n验证：194 项自动测试；A01/Y59 用户清晰截图 16 组位置/路径 OCR 回放通过。Windows 7 实机和不同企业微信窗口结构仍需不发送预演确认，不宣称已完成现场群发验证。\n",
-  "version": "1.1.13",
-  "sha256": "b671393af0a125b98df54d01b26f9b35dfbf4b93f68917f2b7dd65e210bb4f81",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.14/WeComGroupSender_v1.1.14.exe",
+  "notes": "群名特征改为计划列表下方的独立统一区块，仅保留特征1、特征2；所有午晚计划、单群/全量预演及重试共用，不再每条计划重复设置。\n\n两个特征各有预演校准按钮：输入真实群编号，确认搜索结果后按F8保存；只记录，不点击群、不发送。保留原来的三个位置校准和已有分类校准样本。\n\n旧版逐计划特征自动合并去重到两个共享位置，旧配置值另行保留；增加、删除和排序计划不改变共享特征。没有改动群搜索算法。\n\n支持兼容运行环境的小包更新；本次只发布GitHub OTA，不修改宝塔和网站。\n",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617489214"
-  ]
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617522263"
+  ],
+  "version": "1.1.14",
+  "script": {
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.14/WeComGroupSender_scripts_v1.1.14.zip",
+    "sha256": "e3a25faa82707afd9573ce5b2fb3de7a9d599cebc95a913deb8eb6b55154407b",
+    "runtime": "win7-py38-1"
+  },
+  "sha256": "4c5bc9a9c3fe8f08b6aafdaaf817e769906cea1959450df10987756f4d50c526"
 }
