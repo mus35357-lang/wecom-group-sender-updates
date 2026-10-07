@@ -1,12 +1,14 @@
 {
-  "version": "1.1.11",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.11/WeComGroupSender_v1.1.11.exe",
-  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617273951"],
-  "sha256": "de05c10f6b5301cc9fb189f209681fd67a82e26ecc175f377ab96811acee89ab",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.11/WeComGroupSender_scripts_v1.1.11.zip",
-    "sha256": "66f2682a403fe5a2f8a0bb359ba7e25d564cc5e26e1e909e4827a1032f2f19f8",
-    "runtime": "win7-py38-1"
+    "sha256": "8715fad82c29fbf55fd33251a877c3b483fed794ef0a4388b2a934224185fd97",
+    "runtime": "win7-py38-1",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.12/WeComGroupSender_scripts_v1.1.12.zip"
   },
-  "notes": "VIP固定不补0，旧VIP计划位数自动改1；支持地瓜💎VIP1群并排除VIP10/VIP01。全群预演同时学习群位置，正式发送复用小图校验记忆。新增固定运行环境＋脚本小包：本次需完整升级一次，此后兼容的脚本修复只下载约60KB，独立自检后空闲重启；失败回退旧脚本。运行库变化仍完整更新。171项测试、Win7导入检查、打包脚本加载及损坏回退测试通过，未执行真实群发。本次仅发布GitHub OTA，网站保持旧版。旧1.1.6/1.1.7安装器报错者需手动下载新版放在旧程序旁启动一次，保留data。"
+  "sha256": "fe37df6dd76accdbad3c75640c16f553e178f65c21c15dfe6450b24fa56c7036",
+  "version": "1.1.12",
+  "notes": "# v1.1.12 — 输入区误判修复与自动脚本更新\n\n- 删除已校准聊天输入区的同步 WM_NCHITTEST 查询，修复“命中值1却拒绝点击”的调用失败/超时；午晚正式发送、单群及全群预演共用修复。仍检查前台企业微信、坐标范围与弹窗遮挡。搜索结果精确匹配后仍跳过顶部群名核验，不增加OCR。\n- 启动10秒后、计划前一分钟及空闲每30分钟检查更新；兼容小包自动下载，当前任务结束且设置窗口关闭后重启安装。手动检查发现兼容小包也直接更新。\n- 后台不弹确认、不自动下载完整运行库；即将到点或已排队的计划先执行，未保存的计划编辑先等待保存，网络失败继续用旧版本。同一小包安装失败不反复自动重启，可手动重试。\n- v1.1.11需要手动确认本次小包升级一次，升级至本版后后续兼容小包自动更新。更早版本需完整升级。保留失败回退机制和原有账号、计划、话术、位置记忆。\n- 只发布GitHub OTA，不上传宝塔、不修改网站下载页。本机自动测试及隔离安装验证不等同于用户Win7远程环境实测群发。\n",
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617365985"
+  ],
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.12/WeComGroupSender_v1.1.12.exe"
 }
