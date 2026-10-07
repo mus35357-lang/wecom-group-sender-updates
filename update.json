@@ -1,14 +1,14 @@
 {
-  "version": "1.1.19",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.19/WeComGroupSender_scripts_v1.1.19.zip",
-    "runtime": "win7-py38-1",
-    "sha256": "c6abbbeded474fb78973e197185f6c0b209295bb04875ce6244facc7046747b6"
+    "sha256": "ac43920180e333461c9bfdec3947292186cf566712b933c187b0c9d5801ec5b9",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.20/WeComGroupSender_scripts_v1.1.20.zip",
+    "runtime": "win7-py38-1"
   },
+  "notes": "v1.1.20\n\n新增“快速识别列表 → 按报错批次批量排除”。可以按具体日期和时间选择一次预演、正式运行或快速检测的报错批次，查看报错次数及去重群数，再勾选需要排查的群；支持全选、取消全选、查看原次截图及打开原始记录文件夹。\n\n同一群午晚重复报错只排查一次。历史记录仅用于选定搜索目标，不作为退群依据；执行时重新搜索，沿用现有规则跳过全部计划内保护群，只退出目标前、同前缀且满足群名特征的计划外干扰群，遇到目标即结束。保留默认清空聊天记录及退出后 4 秒等待。\n\n仅显示当前账号或明确标注的旧记录；无账号的旧记录需人工确认归属。不在当前计划里的群不可勾选。开始前再次验证所选批次、账号和计划，批量开始有一次范围确认。\n\n搜索无法确认的群保存结果后继续下一项；退出确认异常、操作结果不明或 F2 停止会终止整批，不继续点击其他群。生成独立的逐群汇总和失败截图，未执行项单列。同一批次不重复尝试退出同一干扰群。\n\n保持 v1.1.19 群号漏读修复和每 60 秒空闲检查小包更新。仅 GitHub OTA，不改宝塔。自动测试和离线截图回放不执行真实群发或退群。\n",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618156250"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618255341"
   ],
-  "sha256": "3752fb1bbf93ab9a0cd27a756f9a78b39c78be0a988da6634cb6a20e05cc7013",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.19/WeComGroupSender_v1.1.19.exe",
-  "notes": "v1.1.19\n\n- 修复退群排查时搜索列表中 H111 等蓝色短群号被原尺寸 OCR 漏读、显示“无法确认”的问题。只对目标前第一条无法确认的结果，在同一搜索截图上放大补识别；两次群号必须一致且满足原有置信度及文字特征要求，不猜数字、不放宽保护范围。\n- 单独的时间、日期和信息图标不再拉低群名识别分数。补识别不重复搜索，不增加进群后的群名核对。\n- 保持搜索列表从上往下处理：保护范围内跳过，遇到目标群结束；每退出一个群等待 4 秒重新搜索，保留默认清空聊天记录；不确定或 F2 停止时不继续点击。\n- 保持启动检查、空闲时每 60 秒检查更新和脚本小包自动更新。只发布 GitHub OTA，不修改宝塔或网站。\n\n验证：用户 H111 原图已复现旧失败并通过新逻辑回放，单元测试及离线打包验证不执行真实群发或退群；远程电脑上的实际退群仍需现场验证。\n"
+  "version": "1.1.20",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.20/WeComGroupSender_v1.1.20.exe",
+  "sha256": "9ec70d5df3cd579c0fa3f3a160ef9c226e3b0f2a2005bc21d33d05b9596b435b"
 }
