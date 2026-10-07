@@ -1,7 +1,12 @@
 {
-  "version": "1.1.10",
-  "url": "https://cps.agi687.com/downloads/WeComGroupSender_v1.1.10.exe",
-  "urls": [],
-  "sha256": "a11da39b4a18468fc9283b7b131bb512d9d4eaa0472c57ee57320b08264d3f3c",
-  "notes": "计划可新增、删除、上下排序，不再限三条。同一时间按列表从上到下执行，例如A1-50完成后继续VIP1-5（VIP1设位数1）；到点排队，等待不会因超过补跑时间丢失。恢复独立单群预演，保留午晚全量预演；新增带画面校验的群位置记忆；首次确认账号后固定保存。157项测试、打包自检及Win7导入检查通过，未执行真实群发。保留Win7自动替换修复；旧1.1.6/1.1.7安装器报错的电脑仍需手动下载新版放在旧程序旁启动一次，保留data。"
+  "version": "1.1.11",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.11/WeComGroupSender_v1.1.11.exe",
+  "urls": ["https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/617273951"],
+  "sha256": "de05c10f6b5301cc9fb189f209681fd67a82e26ecc175f377ab96811acee89ab",
+  "script": {
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.11/WeComGroupSender_scripts_v1.1.11.zip",
+    "sha256": "66f2682a403fe5a2f8a0bb359ba7e25d564cc5e26e1e909e4827a1032f2f19f8",
+    "runtime": "win7-py38-1"
+  },
+  "notes": "VIP固定不补0，旧VIP计划位数自动改1；支持地瓜💎VIP1群并排除VIP10/VIP01。全群预演同时学习群位置，正式发送复用小图校验记忆。新增固定运行环境＋脚本小包：本次需完整升级一次，此后兼容的脚本修复只下载约60KB，独立自检后空闲重启；失败回退旧脚本。运行库变化仍完整更新。171项测试、Win7导入检查、打包脚本加载及损坏回退测试通过，未执行真实群发。本次仅发布GitHub OTA，网站保持旧版。旧1.1.6/1.1.7安装器报错者需手动下载新版放在旧程序旁启动一次，保留data。"
 }
