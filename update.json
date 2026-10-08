@@ -1,14 +1,14 @@
 {
-  "sha256": "f66eb0abd856dea185ae2899670098a4316b9e6e61b30a2ce4be896845df967c",
-  "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/620927010"
-  ],
-  "notes": "v1.1.22\n\n修复快速识别检测多轮仍不能记录坐标的问题。自动记录统一按“同一个目标群、同一项、同一行范围”连续两次确认，第一项和第二项规则相同。不再要求 OCR 文字框逐像素相同，也不再用整行 97% 分数或必须识别列表底部作为额外的保存门槛。仍要求搜索群聊区内的目标编号精确且唯一匹配。\n\n自动快速复测只对比目标行文字的小图，忽略其他行和独立时间信息；允许同一行内小幅位置偏差和浅色悬停背景变化。群号数字变化、目标换行、不同账号或窗口尺寸变化仍回到识别，不盲点。第一、二轮学习，第三轮实际复测跳过 OCR。\n\n列表显示“自动已记录（第几项）”或“待第二次确认（第几项，1/2）”。一次搜索识别不完整不再删除已有坐标；保留 F8 手动记录和午晚共用机制。保存失败会记录具体原因。检测仍只搜索，不进群、不发送、不退群。\n\n保留 v1.1.21 结果上报队列修复。仅发布 GitHub OTA，网站和宝塔不变；兼容客户端优先下载脚本小包并在空闲时切换。自动测试不代表已在用户实际 Win7 远程桌面验证。\n",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.22/WeComGroupSender_v1.1.22.exe",
-  "version": "1.1.22",
+  "version": "1.1.23",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.23/WeComGroupSender_v1.1.23.exe",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.22/WeComGroupSender_scripts_v1.1.22.zip",
+    "sha256": "f9caa5d6ebcd496d03a99c5ebf305229ea6bddc7038e8f192e3c92dd5ef81f16",
     "runtime": "win7-py38-1",
-    "sha256": "f83cbdd80767208980c6abca5c0930827d229b1b5ba6446dafdb4d3e89596187"
-  }
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.23/WeComGroupSender_scripts_v1.1.23.zip"
+  },
+  "sha256": "d40b38911c25de4f0db98d68a11853df134a0e33034c4cf6b6491d386e4440c6",
+  "notes": "v1.1.23\n\n快速识别检测改为“只补未记录，已有跳过”：当前账号、窗口尺寸及校准配置下已有可用快速记录的群，直接跳过，不搜索、不 OCR、不进群、不复测；只搜索未记录或待确认的群。午晚重复群仍只学习一次并共用记录。\n\n结果分别统计“已有记录跳过”和“本次快速通过”，保留未就绪、失败、未检查和失败截图。跳过不代表本次重新验证成功。损坏记录或不符合当前特征的记录不会误报为可用。\n\n单群快速点击测试仍可主动复测已记录的群；午晚全量预演仍保留全量搜索复测。保留 v1.1.22 同一项、同一行范围连续两次学习及 v1.1.21 上报队列修复。\n\n仅发布 GitHub OTA，网站和宝塔不变；兼容客户端优先下载脚本小包并在空闲时切换。未在用户实际 Win7 远程桌面执行群发或退群。\n",
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/620976203"
+  ]
 }
