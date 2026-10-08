@@ -1,14 +1,14 @@
 {
-  "sha256": "40cbd0bb35ed1a6ac00ae686dad6d2b0d31b466270e6f5e66ea8cffd1c9a5e05",
+  "sha256": "f66eb0abd856dea185ae2899670098a4316b9e6e61b30a2ce4be896845df967c",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/620603742"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/620927010"
   ],
-  "version": "1.1.21",
-  "notes": "v1.1.21\n\n修复“客户端完成群发、网站在线但结果一直为 0”的上报队列阻塞问题。\n\n旧任务已结束或快照冲突（HTTP 409）及单条记录拒收时，将原始记录和错误原因单独保留在 data/management/账号目录/rejected，继续上传其他报告，不再被一条旧记录堵住。格式异常的本地记录同样保留，不清空队列。认证失败、网络中断和服务器临时错误仍保留待上传记录并重试。\n\n主界面区分在线心跳与结果上传，显示待上传数量、已单独保留的拒收数量及上传异常；日志不再静默吞掉上传错误。只有网站明确确认接收才移除队列项。\n\n更新后自动尝试补传现有 outbox 内的积压结果，只上传统计和原有截图，不会重新执行群发，不修改发送进度，不自动覆盖网站上已结束的冲突任务。\n\n本次只发布 GitHub OTA，网站程序和宝塔配置不变。兼容已有脚本更新运行时，优先下载约 100 KB 的小包，空闲时切换。离线回放与自动测试不执行真实群发或退群。\n",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.21/WeComGroupSender_v1.1.21.exe",
+  "notes": "v1.1.22\n\n修复快速识别检测多轮仍不能记录坐标的问题。自动记录统一按“同一个目标群、同一项、同一行范围”连续两次确认，第一项和第二项规则相同。不再要求 OCR 文字框逐像素相同，也不再用整行 97% 分数或必须识别列表底部作为额外的保存门槛。仍要求搜索群聊区内的目标编号精确且唯一匹配。\n\n自动快速复测只对比目标行文字的小图，忽略其他行和独立时间信息；允许同一行内小幅位置偏差和浅色悬停背景变化。群号数字变化、目标换行、不同账号或窗口尺寸变化仍回到识别，不盲点。第一、二轮学习，第三轮实际复测跳过 OCR。\n\n列表显示“自动已记录（第几项）”或“待第二次确认（第几项，1/2）”。一次搜索识别不完整不再删除已有坐标；保留 F8 手动记录和午晚共用机制。保存失败会记录具体原因。检测仍只搜索，不进群、不发送、不退群。\n\n保留 v1.1.21 结果上报队列修复。仅发布 GitHub OTA，网站和宝塔不变；兼容客户端优先下载脚本小包并在空闲时切换。自动测试不代表已在用户实际 Win7 远程桌面验证。\n",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.22/WeComGroupSender_v1.1.22.exe",
+  "version": "1.1.22",
   "script": {
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.22/WeComGroupSender_scripts_v1.1.22.zip",
     "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.21/WeComGroupSender_scripts_v1.1.21.zip",
-    "sha256": "9f62286fdb9b58d94e6bbd2d47c697adeff160cfbc9a91e9f5b3e6d8917902bb"
+    "sha256": "f83cbdd80767208980c6abca5c0930827d229b1b5ba6446dafdb4d3e89596187"
   }
 }
