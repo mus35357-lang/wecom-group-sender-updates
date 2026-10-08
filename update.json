@@ -1,14 +1,14 @@
 {
-  "script": {
-    "sha256": "ac43920180e333461c9bfdec3947292186cf566712b933c187b0c9d5801ec5b9",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.20/WeComGroupSender_scripts_v1.1.20.zip",
-    "runtime": "win7-py38-1"
-  },
-  "notes": "v1.1.20\n\n新增“快速识别列表 → 按报错批次批量排除”。可以按具体日期和时间选择一次预演、正式运行或快速检测的报错批次，查看报错次数及去重群数，再勾选需要排查的群；支持全选、取消全选、查看原次截图及打开原始记录文件夹。\n\n同一群午晚重复报错只排查一次。历史记录仅用于选定搜索目标，不作为退群依据；执行时重新搜索，沿用现有规则跳过全部计划内保护群，只退出目标前、同前缀且满足群名特征的计划外干扰群，遇到目标即结束。保留默认清空聊天记录及退出后 4 秒等待。\n\n仅显示当前账号或明确标注的旧记录；无账号的旧记录需人工确认归属。不在当前计划里的群不可勾选。开始前再次验证所选批次、账号和计划，批量开始有一次范围确认。\n\n搜索无法确认的群保存结果后继续下一项；退出确认异常、操作结果不明或 F2 停止会终止整批，不继续点击其他群。生成独立的逐群汇总和失败截图，未执行项单列。同一批次不重复尝试退出同一干扰群。\n\n保持 v1.1.19 群号漏读修复和每 60 秒空闲检查小包更新。仅 GitHub OTA，不改宝塔。自动测试和离线截图回放不执行真实群发或退群。\n",
+  "sha256": "40cbd0bb35ed1a6ac00ae686dad6d2b0d31b466270e6f5e66ea8cffd1c9a5e05",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/618255341"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/620603742"
   ],
-  "version": "1.1.20",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.20/WeComGroupSender_v1.1.20.exe",
-  "sha256": "9ec70d5df3cd579c0fa3f3a160ef9c226e3b0f2a2005bc21d33d05b9596b435b"
+  "version": "1.1.21",
+  "notes": "v1.1.21\n\n修复“客户端完成群发、网站在线但结果一直为 0”的上报队列阻塞问题。\n\n旧任务已结束或快照冲突（HTTP 409）及单条记录拒收时，将原始记录和错误原因单独保留在 data/management/账号目录/rejected，继续上传其他报告，不再被一条旧记录堵住。格式异常的本地记录同样保留，不清空队列。认证失败、网络中断和服务器临时错误仍保留待上传记录并重试。\n\n主界面区分在线心跳与结果上传，显示待上传数量、已单独保留的拒收数量及上传异常；日志不再静默吞掉上传错误。只有网站明确确认接收才移除队列项。\n\n更新后自动尝试补传现有 outbox 内的积压结果，只上传统计和原有截图，不会重新执行群发，不修改发送进度，不自动覆盖网站上已结束的冲突任务。\n\n本次只发布 GitHub OTA，网站程序和宝塔配置不变。兼容已有脚本更新运行时，优先下载约 100 KB 的小包，空闲时切换。离线回放与自动测试不执行真实群发或退群。\n",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.21/WeComGroupSender_v1.1.21.exe",
+  "script": {
+    "runtime": "win7-py38-1",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.21/WeComGroupSender_scripts_v1.1.21.zip",
+    "sha256": "9f62286fdb9b58d94e6bbd2d47c697adeff160cfbc9a91e9f5b3e6d8917902bb"
+  }
 }
