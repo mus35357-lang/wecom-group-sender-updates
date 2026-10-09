@@ -1,14 +1,14 @@
 {
-    "version":  "1.1.25",
-    "script":  {
-                   "runtime":  "win7-py38-1",
-                   "url":  "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.25/WeComGroupSender_scripts_v1.1.25.zip",
-                   "sha256":  "11a3ea8985ca5a1452e744f90d3ee81443b8d4c10c03ccf9c2a04c400bf293f1"
-               },
-    "sha256":  "fa39357d7a410cb1f1e07b4ec8825d58337f2dc29eafb01ab0ebe4b413ab174b",
-    "urls":  [
-                 "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/623878927"
-             ],
-    "url":  "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.25/WeComGroupSender_v1.1.25.exe",
-    "notes":  "# v1.1.25 点击诊断版\n\n- 新增本地点击诊断：记录当前程序版本、进程、实际读取的校准文件路径与坐标、窗口位置、请求点击点以及点击前后鼠标位置。日志保存在 data/click_diagnostics，不自动上传。\n- 本次不改变相对坐标算法，不增加图像识别或自动纠偏，不覆盖原校准。收藏菜单定位仍保留。\n- 这是误点直播问题的诊断版本，不代表已确认修复。请先在受影响电脑运行单群预演（不发送）；出现异常后保留对应日志和失败截图，暂不恢复正式群发。\n- 包含此前待发布的上传文件占用修复：原子写入短暂重试；服务器接收后本地清理失败不再阻塞后续记录，保留幂等重试，不会重新群发。\n- 包含独立链接检测入口，默认关闭：仅检测话术 HTTP/HTTPS 链接，不检测小程序。首次需手动发送到专用测试会话并校准；新增链接、滚动后不可见消息需要重新记录。尚未完成真实 Win7 企业微信验收，请勿直接开启定时检测。\n\n本版本不自动修改网站历史群发记录，也不自动开启链接检测。\n"
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/untagged-eb42971a1d443db3b8c8/WeComGroupSender_v1.1.26.exe",
+  "notes": "# v1.1.26\n\n- 正式发送、网站补发和预演分别标记执行入口、群号、进度阶段；本机记录关键动作前后的企微截图、窗口位置、请求坐标、实际鼠标位置、命中窗口和异常堆栈。\n- 界面增加“打开动作现场记录”；每次运行保留最近 40 张关键现场图及完整事件日志，位于 data/action_diagnostics。截图仅本地保存，不自动上传。\n- 诊断不改变相对坐标、校准、发送判定或点击重试；截图会有少量采集开销，耗时一并记录。未宣称已确定或修复误点直播的根因。\n- “链接检测（指定电脑执行）”独立一行；包含上版的 H5 链接检测，需网站指定检测账号、用户首次校准专用会话和页面，默认不自动启用。不检测小程序。\n- VM 定时助手另行提供 1.3.0：列表变化观测结果可上传网站独立 CPS 记录，断网补传不重新群发。VM 不是群发助手脚本，需单独替换其程序。\n",
+  "version": "1.1.26",
+  "sha256": "41838fc8054afab60567b323049e0d079a447da2417ef799186184732654c86b",
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/624191653"
+  ],
+  "script": {
+    "runtime": "win7-py38-1",
+    "sha256": "da3f1afa44929c897d4733b1145a4c65867670ac90959f393857142c565d7778",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/untagged-eb42971a1d443db3b8c8/WeComGroupSender_scripts_v1.1.26.zip"
+  }
 }
