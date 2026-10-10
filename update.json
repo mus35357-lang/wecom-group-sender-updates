@@ -1,14 +1,14 @@
 {
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/624509709"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/627239496"
   ],
-  "version": "1.1.27",
+  "notes": "# 企业微信群发助手 v1.1.28\n\n- 链接检测每轮先同步网站话术，HTTP/HTTPS 链接去重，小程序不检测。\n- 固定使用已指定的 A150 地瓜霸王餐测试群，新增链接自动发送一次；旧链接通过内置 OCR 重新定位，不重复发送。\n- 全部链接共用一次校准的失效提示，已取消逐条填写正常页特征。支持从失效示例页面 OCR 记录提示。\n- 空白、加载异常、未确认新浏览器窗口记为检测失败，不会误报未失效。每次结果按原接口上传网站。\n- 增加发送前落盘记录、草稿保护和中断后不重发；F2 停止不会被后台记录覆盖。\n- 保留原群发校准、快速群坐标、发送流程及计划配置；本次不更新 VM 定时助手。\n\n首次使用：绑定 A150 独立聊天窗口的一套区域，再打开失效示例 https://kurl01.cn/tl0sNL 并用 F8 记录失效页。关闭示例浏览器后先点“立即检测”验证。网站和本机定时开关均开启才会自动检测。\n\n发布验证通过不等于 Win7 现场验收；尚未进行真实群消息发送测试。已有校准和账号数据不打包、不覆盖。\n",
+  "sha256": "bffbf9bacbd51f3ac525bfa0ebc66c885727844f354595ece1244f79e2aafc6d",
+  "version": "1.1.28",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.28/WeComGroupSender_v1.1.28.exe",
   "script": {
-    "sha256": "bff7f2e181f4cde0cf1ce7b8f334cc73678a53b037a061ca10d681301ae6a7d6",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.27/WeComGroupSender_scripts_v1.1.27.zip",
-    "runtime": "win7-py38-1"
-  },
-  "sha256": "3acc7eed7e61de316a8df1126f74f5f75e03917442c59af63e9c1a390abf96d2",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.27/WeComGroupSender_v1.1.27.exe",
-  "notes": "# v1.1.27\n\n- 修复快速点击测试在搜索画面尚未稳定时立即失败：短暂等待并要求连续两帧确认，不执行 OCR、不发送。\n- 手动 F8 记录在原相对坐标的小图连续确认一致时，不再依赖必须取得独立搜索弹层窗口；已知范围冲突仍停止。保留原坐标、校准文件和记录，不要求重新校准。\n- 快速测试失败保存真正参与判断的截图、逐帧原因、窗口尺寸、记录文件和弹层范围，不再只有笼统的“未命中”。\n- “错过计划后补跑”改为“整批结束后复查”：默认 5 分钟，可自定义，0 关闭。只复查一次本批本日进度；已完成不重复发，文字已发仅补小程序，发送状态不明不自动重发。停止会取消待执行复查。\n- 三点校准、坐标换算、收藏点击及正式发送流程保持不变；不更改网站历史统计，不自动启用链接检测。\n\n已通过 310 项测试、完整程序与脚本小包一致性检查及独立启动自检。K02 用户样本离线通过；仍不等同真实 Win7 现场验收。\nVM 稳定定时助手是独立程序，不由本次群发助手 OTA 替换。\n"
+    "runtime": "win7-py38-1",
+    "sha256": "c3e010e78b4247545bce326bdcb0b175b485e85943d89916f6315c6f34e5f136",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.28/WeComGroupSender_scripts_v1.1.28.zip"
+  }
 }
