@@ -1,14 +1,14 @@
 {
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/627239496"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/627564018"
   ],
-  "notes": "# 企业微信群发助手 v1.1.28\n\n- 链接检测每轮先同步网站话术，HTTP/HTTPS 链接去重，小程序不检测。\n- 固定使用已指定的 A150 地瓜霸王餐测试群，新增链接自动发送一次；旧链接通过内置 OCR 重新定位，不重复发送。\n- 全部链接共用一次校准的失效提示，已取消逐条填写正常页特征。支持从失效示例页面 OCR 记录提示。\n- 空白、加载异常、未确认新浏览器窗口记为检测失败，不会误报未失效。每次结果按原接口上传网站。\n- 增加发送前落盘记录、草稿保护和中断后不重发；F2 停止不会被后台记录覆盖。\n- 保留原群发校准、快速群坐标、发送流程及计划配置；本次不更新 VM 定时助手。\n\n首次使用：绑定 A150 独立聊天窗口的一套区域，再打开失效示例 https://kurl01.cn/tl0sNL 并用 F8 记录失效页。关闭示例浏览器后先点“立即检测”验证。网站和本机定时开关均开启才会自动检测。\n\n发布验证通过不等于 Win7 现场验收；尚未进行真实群消息发送测试。已有校准和账号数据不打包、不覆盖。\n",
-  "sha256": "bffbf9bacbd51f3ac525bfa0ebc66c885727844f354595ece1244f79e2aafc6d",
-  "version": "1.1.28",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.28/WeComGroupSender_v1.1.28.exe",
+  "version": "1.1.29",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.29/WeComGroupSender_v1.1.29.exe",
   "script": {
-    "runtime": "win7-py38-1",
-    "sha256": "c3e010e78b4247545bce326bdcb0b175b485e85943d89916f6315c6f34e5f136",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.28/WeComGroupSender_scripts_v1.1.28.zip"
-  }
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.29/WeComGroupSender_scripts_v1.1.29.zip",
+    "sha256": "1b2af6f1ba72e7c6f079be416eeedaec990e2a46a3a607eabdf072704fbb00b2",
+    "runtime": "win7-py38-1"
+  },
+  "sha256": "1da5cb10e862dc5fe489c048e47ddbeac71717f491df4bb5ae438387b946ee40",
+  "notes": "# v1.1.29 · 链接检测不再打开浏览器\n\n- 企微把链接改成腾讯风险提醒地址：上报异常，并注明“企微风险提醒”。\n- 企微直接交出原链接：上报未检测到拦截；不承诺目标网页本身可访问。\n- 收不到地址、地址不匹配或超时：检测失败，不算正常。\n- 不需失效页截图、特征文字或浏览器窗口校准。OCR 仅用于测试群消息定位。\n- 检测时短暂接收当前 URL，其他网址交给原浏览器，不记录。每条结束/F2/超时恢复；独立恢复进程处理主程序异常退出。\n- 沿用网站提取话术链接、去重、定时和结果同步；新增链接只发一次，未变链接复用旧消息。\n- 原群发识别、坐标、计划和账号统计逻辑不变。\n\n首次使用：打开原软件“链接检测”，保留或绑定 A150 测试群；勾选“允许检测时临时接收网址”并保存，点“立即检测”。不必再记录失效网页。定时需网站和本机都启用。\n\n平台：Python 3.8 Win7 原运行库；内置轻量 .NET 3.5 接收器（无浏览器引擎）。本机两条企微真实链接已验证分流，Win7 构建与恢复测试通过后发布；具体 Win7 机器仍须首次立即检测验收。遇到特殊默认浏览器启动方式会报错并保持原设置。\n"
 }
