@@ -1,14 +1,14 @@
 {
-  "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/627564018"
-  ],
-  "version": "1.1.29",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.29/WeComGroupSender_v1.1.29.exe",
+  "version": "1.1.30",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.29/WeComGroupSender_scripts_v1.1.29.zip",
-    "sha256": "1b2af6f1ba72e7c6f079be416eeedaec990e2a46a3a607eabdf072704fbb00b2",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.30/WeComGroupSender_scripts_v1.1.30.zip",
+    "sha256": "777d9790c360c700573ead22cdd3fd034e14d8471266c7917b82f4e401760fb3",
     "runtime": "win7-py38-1"
   },
-  "sha256": "1da5cb10e862dc5fe489c048e47ddbeac71717f491df4bb5ae438387b946ee40",
-  "notes": "# v1.1.29 · 链接检测不再打开浏览器\n\n- 企微把链接改成腾讯风险提醒地址：上报异常，并注明“企微风险提醒”。\n- 企微直接交出原链接：上报未检测到拦截；不承诺目标网页本身可访问。\n- 收不到地址、地址不匹配或超时：检测失败，不算正常。\n- 不需失效页截图、特征文字或浏览器窗口校准。OCR 仅用于测试群消息定位。\n- 检测时短暂接收当前 URL，其他网址交给原浏览器，不记录。每条结束/F2/超时恢复；独立恢复进程处理主程序异常退出。\n- 沿用网站提取话术链接、去重、定时和结果同步；新增链接只发一次，未变链接复用旧消息。\n- 原群发识别、坐标、计划和账号统计逻辑不变。\n\n首次使用：打开原软件“链接检测”，保留或绑定 A150 测试群；勾选“允许检测时临时接收网址”并保存，点“立即检测”。不必再记录失效网页。定时需网站和本机都启用。\n\n平台：Python 3.8 Win7 原运行库；内置轻量 .NET 3.5 接收器（无浏览器引擎）。本机两条企微真实链接已验证分流，Win7 构建与恢复测试通过后发布；具体 Win7 机器仍须首次立即检测验收。遇到特殊默认浏览器启动方式会报错并保持原设置。\n"
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/629725740"
+  ],
+  "notes": "# v1.1.30 · 记录坐标直接点击 + 独立进群等待\n\n- 已完成的自动/F8 记录直接使用原窗口相对坐标。不比较小图、不复核群名特征、不调用群名 OCR，不自动覆盖已完成记录。\n- 只有没有完成坐标记录的群才识别并学习；已完成记录数值损坏则报错并保留，不回退识别。\n- 同账号、校准和窗口尺寸沿用旧坐标；移动窗口不影响相对位置。换账号或改变窗口尺寸/布局属于不同坐标环境。\n- 注意：直接坐标模式不会发现搜索结果顺序改变；顺序变化需要用户重新校准。\n\n- 新增“进群后等待（秒，1～30）”，默认 1.5 秒。老配置缺少该字段时自动使用默认值，无需重新校准。\n- 点击精确匹配的群后，先完整等待，再继续粘贴话术或小程序操作；若原操作间隔更长，沿用较长值。\n- 其他步骤仍用原“操作间隔”。只搜索、不进群的快速识别检测不增加等待。\n- 等待可被 F2 立即打断；本地诊断记录进群等待开始、结束及秒数。\n- 没有更改未记录群的 OCR 规则、坐标换算、发送完成判定和网站统计。\n\n使用：主界面“操作间隔”下一行设置“进群后等待”，点“保存计划”。慢机器可先设 2～3 秒。本次调整针对切群缓慢造成的输入时序风险；固定等待不是发送成功验证，实际机器仍需一次人工观察验收。\n",
+  "sha256": "fc6c10f8396a263e3a1fcf954cacf18f45d44a4fc5a064a02d9f146acf62ba34",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.30/WeComGroupSender_v1.1.30.exe"
 }
