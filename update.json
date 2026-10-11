@@ -1,14 +1,14 @@
 {
-  "notes": "# 1.1.31 — 连接冲突重新绑定与桌面入口\n\n- 账号与话术设置增加“重新绑定此电脑”：复用此目录的连接凭证，显式申请，显示12位校验码。网站必须部署配套 account_rebind 功能。\n- 网站管理员输入此电脑的校验码并确认后，才替换指定账号旧连接。保留历史、话术分配和分类；取消该账号未完成补发队列，避免换机后重复发送。\n- 旧连接不能重新抢回账号；待确认申请24小时过期。普通409重试不会自动创建替换申请，也不删除 data。\n- 启动时创建/修复本安装目录的桌面快捷方式；“修复桌面入口/查看版本”可查看实际启动程序和数据目录。不会删除桌面其他软件或其他独立安装。\n- 不修改坐标、OCR、发送动作和定时计划。旧软件的本地定时任务不受网站解绑控制，重新绑定前应手动退出旧副本。\n\n## 使用\n\n1. 先更新网站端，再将本版本放在原程序目录，保留原 data，并退出旧程序。\n2. 固定账号名保存为原网站账号（如 Q2链接检测），打开“账号与话术设置”，点击“重新绑定此电脑”。\n3. 网站“企微账号 → 重新绑定申请 → 核对并重新绑定”，输入客户端校验码，确认替换。\n4. 客户端下次同步恢复连接；也可点“立即同步”。此过程不发送聊天消息。\n\n本文件是发布说明，不代表已推送 OTA 或已完成真实 Q2 电脑重绑。部署和真实设备验收须单独记录。\n",
-  "script": {
-    "runtime": "win7-py38-1",
-    "sha256": "3f32cb87f8b9b341ee7cdff3dc5df474bdb8c6b0b13210b9f54678d0d258a3d0",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.31/WeComGroupSender_scripts_v1.1.31.zip"
-  },
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/630203497"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/630313857"
   ],
-  "sha256": "0de2a1daeee408a55d143312e428e188eed90a7d07cb8751301bd8d1e5a95aaa",
-  "version": "1.1.31",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.31/WeComGroupSender_v1.1.31.exe"
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.32/WeComGroupSender_v1.1.32.exe",
+  "sha256": "b081e257e097b85142df2d8b8d9cd698330e6ab537c608c267a382f099ccefac",
+  "version": "1.1.32",
+  "notes": "链接检测专项修复（不改群发坐标、快速点击和群发计划）：\n\n- 输入网址改用 Ctrl+A/C 复制回读验证，不再以 OCR 逐字核对，防止短链接大小写和相似字符误识别。\n- 未发送准备状态与已点击发送状态分开；仅能恢复本程序明确未发送的草稿，旧版待确认记录仍不自动重发。\n- 历史消息改用小步重叠查找，最多 6 次扫描/20 秒搜索预算，画面不变即停止，找不到返回最新消息；支持换行网址和二倍放大识别。\n- 草稿/输入回读异常立即停止整轮并暂停本机定时检测，不再后续逐个重复报错。\n- 明确显示未完成数量和无到期任务，不能将“检测 0 个”误认为成功。\n\n升级后若输入框残留旧版草稿，请先手动清空测试群输入框，保持以前发送的链接消息可见，再点“立即检测”。旧版发送待确认记录不会自动删除，也不会自动重发。不需要重新校准群发坐标。\n",
+  "script": {
+    "sha256": "3db262ac976397287ced953f2842c9985e0076c8f1f1f3c25595b9b077f348dd",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.32/WeComGroupSender_scripts_v1.1.32.zip",
+    "runtime": "win7-py38-1"
+  }
 }
