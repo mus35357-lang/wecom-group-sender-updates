@@ -1,14 +1,14 @@
 {
-  "version": "1.1.30",
+  "notes": "# 1.1.31 — 连接冲突重新绑定与桌面入口\n\n- 账号与话术设置增加“重新绑定此电脑”：复用此目录的连接凭证，显式申请，显示12位校验码。网站必须部署配套 account_rebind 功能。\n- 网站管理员输入此电脑的校验码并确认后，才替换指定账号旧连接。保留历史、话术分配和分类；取消该账号未完成补发队列，避免换机后重复发送。\n- 旧连接不能重新抢回账号；待确认申请24小时过期。普通409重试不会自动创建替换申请，也不删除 data。\n- 启动时创建/修复本安装目录的桌面快捷方式；“修复桌面入口/查看版本”可查看实际启动程序和数据目录。不会删除桌面其他软件或其他独立安装。\n- 不修改坐标、OCR、发送动作和定时计划。旧软件的本地定时任务不受网站解绑控制，重新绑定前应手动退出旧副本。\n\n## 使用\n\n1. 先更新网站端，再将本版本放在原程序目录，保留原 data，并退出旧程序。\n2. 固定账号名保存为原网站账号（如 Q2链接检测），打开“账号与话术设置”，点击“重新绑定此电脑”。\n3. 网站“企微账号 → 重新绑定申请 → 核对并重新绑定”，输入客户端校验码，确认替换。\n4. 客户端下次同步恢复连接；也可点“立即同步”。此过程不发送聊天消息。\n\n本文件是发布说明，不代表已推送 OTA 或已完成真实 Q2 电脑重绑。部署和真实设备验收须单独记录。\n",
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.30/WeComGroupSender_scripts_v1.1.30.zip",
-    "sha256": "777d9790c360c700573ead22cdd3fd034e14d8471266c7917b82f4e401760fb3",
-    "runtime": "win7-py38-1"
+    "runtime": "win7-py38-1",
+    "sha256": "3f32cb87f8b9b341ee7cdff3dc5df474bdb8c6b0b13210b9f54678d0d258a3d0",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.31/WeComGroupSender_scripts_v1.1.31.zip"
   },
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/629725740"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/630203497"
   ],
-  "notes": "# v1.1.30 · 记录坐标直接点击 + 独立进群等待\n\n- 已完成的自动/F8 记录直接使用原窗口相对坐标。不比较小图、不复核群名特征、不调用群名 OCR，不自动覆盖已完成记录。\n- 只有没有完成坐标记录的群才识别并学习；已完成记录数值损坏则报错并保留，不回退识别。\n- 同账号、校准和窗口尺寸沿用旧坐标；移动窗口不影响相对位置。换账号或改变窗口尺寸/布局属于不同坐标环境。\n- 注意：直接坐标模式不会发现搜索结果顺序改变；顺序变化需要用户重新校准。\n\n- 新增“进群后等待（秒，1～30）”，默认 1.5 秒。老配置缺少该字段时自动使用默认值，无需重新校准。\n- 点击精确匹配的群后，先完整等待，再继续粘贴话术或小程序操作；若原操作间隔更长，沿用较长值。\n- 其他步骤仍用原“操作间隔”。只搜索、不进群的快速识别检测不增加等待。\n- 等待可被 F2 立即打断；本地诊断记录进群等待开始、结束及秒数。\n- 没有更改未记录群的 OCR 规则、坐标换算、发送完成判定和网站统计。\n\n使用：主界面“操作间隔”下一行设置“进群后等待”，点“保存计划”。慢机器可先设 2～3 秒。本次调整针对切群缓慢造成的输入时序风险；固定等待不是发送成功验证，实际机器仍需一次人工观察验收。\n",
-  "sha256": "fc6c10f8396a263e3a1fcf954cacf18f45d44a4fc5a064a02d9f146acf62ba34",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.30/WeComGroupSender_v1.1.30.exe"
+  "sha256": "0de2a1daeee408a55d143312e428e188eed90a7d07cb8751301bd8d1e5a95aaa",
+  "version": "1.1.31",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.31/WeComGroupSender_v1.1.31.exe"
 }
