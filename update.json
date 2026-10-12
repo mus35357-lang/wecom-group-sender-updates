@@ -1,14 +1,14 @@
 {
+  "sha256": "5071ed9cb0401246072e541399838b25f02736e0c63de85798e4dc89c6cec4fc",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/630313857"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/632432321"
   ],
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.32/WeComGroupSender_v1.1.32.exe",
-  "sha256": "b081e257e097b85142df2d8b8d9cd698330e6ab537c608c267a382f099ccefac",
-  "version": "1.1.32",
-  "notes": "链接检测专项修复（不改群发坐标、快速点击和群发计划）：\n\n- 输入网址改用 Ctrl+A/C 复制回读验证，不再以 OCR 逐字核对，防止短链接大小写和相似字符误识别。\n- 未发送准备状态与已点击发送状态分开；仅能恢复本程序明确未发送的草稿，旧版待确认记录仍不自动重发。\n- 历史消息改用小步重叠查找，最多 6 次扫描/20 秒搜索预算，画面不变即停止，找不到返回最新消息；支持换行网址和二倍放大识别。\n- 草稿/输入回读异常立即停止整轮并暂停本机定时检测，不再后续逐个重复报错。\n- 明确显示未完成数量和无到期任务，不能将“检测 0 个”误认为成功。\n\n升级后若输入框残留旧版草稿，请先手动清空测试群输入框，保持以前发送的链接消息可见，再点“立即检测”。旧版发送待确认记录不会自动删除，也不会自动重发。不需要重新校准群发坐标。\n",
+  "notes": "链接检测修复：\n\n- 修复短链接大写 O/数字 0、I/l/1 相似字符导致明明可见却找不到。OCR 仅定位候选，必须收到本条真实网址才判定结果；不改写网址，也不以相似匹配判有效。\n- 新增“选中链接定位 F8”：鼠标指向链接按 F8，记录窗口相对位置，不保存截图。检测优先直接点击手动位置，不再 OCR 识别链接或翻历史。消息滚动后须重新定位，可随时取消手动位置恢复自动查找。\n- 日志明确显示“已点击链接，等待企微返回检测结果”；汇总直接显示有效 / 无效 / 未完成。\n- 网站列表和历史同步简化为有效 / 无效 / 未完成，不展示内部判断文字，仍无截图入口。\n\n不改群发坐标、直接点击策略或群发计划。有效仅表示本次未发现企微拦截，不代表网页内容加载测试。\n",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.33/WeComGroupSender_v1.1.33.exe",
+  "version": "1.1.33",
   "script": {
-    "sha256": "3db262ac976397287ced953f2842c9985e0076c8f1f1f3c25595b9b077f348dd",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.32/WeComGroupSender_scripts_v1.1.32.zip",
-    "runtime": "win7-py38-1"
+    "sha256": "9f9a0de351387d3a679df56896715e998e1481e00b1d2bc5066eab3d3dde338d",
+    "runtime": "win7-py38-1",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.33/WeComGroupSender_scripts_v1.1.33.zip"
   }
 }
