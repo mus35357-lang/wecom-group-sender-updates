@@ -1,14 +1,14 @@
 {
-  "sha256": "5071ed9cb0401246072e541399838b25f02736e0c63de85798e4dc89c6cec4fc",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.34/WeComGroupSender_v1.1.34.exe",
+  "notes": "# v1.1.34\n\n- 链接检测整轮同步领取并回报，不再每个链接单独到期。\n- 首次升级或话术链接/来源版本更新时，全部链接按一行一条发送为一条测试消息；两次 OCR 范围相交后记录中心相对坐标。\n- 记录后直接点击，不再 OCR 识别链接或滚动历史。窗口可移动；改变尺寸需重绑，人工滚动后需重新定位。\n- 每次点击仍须接收到当前对应网址才给出有效/无效，未完成不冒充有效。\n- 检测不保存/上传图片；网站列表简化为有效、无效、未完成，显示统一轮次时间，历史保留实际回报时间。\n- 群发坐标、快速点击、账号接入、进群间隔和群发计划保持不变。\n\n仅检查企业微信拦截情况，不是目标网页内容可访问性测试。\n",
+  "version": "1.1.34",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/632432321"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/632673053"
   ],
-  "notes": "链接检测修复：\n\n- 修复短链接大写 O/数字 0、I/l/1 相似字符导致明明可见却找不到。OCR 仅定位候选，必须收到本条真实网址才判定结果；不改写网址，也不以相似匹配判有效。\n- 新增“选中链接定位 F8”：鼠标指向链接按 F8，记录窗口相对位置，不保存截图。检测优先直接点击手动位置，不再 OCR 识别链接或翻历史。消息滚动后须重新定位，可随时取消手动位置恢复自动查找。\n- 日志明确显示“已点击链接，等待企微返回检测结果”；汇总直接显示有效 / 无效 / 未完成。\n- 网站列表和历史同步简化为有效 / 无效 / 未完成，不展示内部判断文字，仍无截图入口。\n\n不改群发坐标、直接点击策略或群发计划。有效仅表示本次未发现企微拦截，不代表网页内容加载测试。\n",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.33/WeComGroupSender_v1.1.33.exe",
-  "version": "1.1.33",
+  "sha256": "2a4dcb9b212210fab7d51b4ce5b6d7fe7557bdb451ed61b29524963fb940390f",
   "script": {
-    "sha256": "9f9a0de351387d3a679df56896715e998e1481e00b1d2bc5066eab3d3dde338d",
     "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.33/WeComGroupSender_scripts_v1.1.33.zip"
+    "sha256": "561bf8ff6b4d96b7e7a0150ae7f5c25bac70e5af573c8fc250d12bf57c0fca7f",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.34/WeComGroupSender_scripts_v1.1.34.zip"
   }
 }
