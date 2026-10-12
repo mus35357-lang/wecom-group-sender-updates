@@ -1,14 +1,14 @@
 {
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.34/WeComGroupSender_v1.1.34.exe",
-  "notes": "# v1.1.34\n\n- 链接检测整轮同步领取并回报，不再每个链接单独到期。\n- 首次升级或话术链接/来源版本更新时，全部链接按一行一条发送为一条测试消息；两次 OCR 范围相交后记录中心相对坐标。\n- 记录后直接点击，不再 OCR 识别链接或滚动历史。窗口可移动；改变尺寸需重绑，人工滚动后需重新定位。\n- 每次点击仍须接收到当前对应网址才给出有效/无效，未完成不冒充有效。\n- 检测不保存/上传图片；网站列表简化为有效、无效、未完成，显示统一轮次时间，历史保留实际回报时间。\n- 群发坐标、快速点击、账号接入、进群间隔和群发计划保持不变。\n\n仅检查企业微信拦截情况，不是目标网页内容可访问性测试。\n",
-  "version": "1.1.34",
-  "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/632673053"
-  ],
-  "sha256": "2a4dcb9b212210fab7d51b4ce5b6d7fe7557bdb451ed61b29524963fb940390f",
   "script": {
+    "sha256": "b8dd83f265e381b1c63d175a37d8838f68d649a4c65bd3d142890f5104ee609b",
     "runtime": "win7-py38-1",
-    "sha256": "561bf8ff6b4d96b7e7a0150ae7f5c25bac70e5af573c8fc250d12bf57c0fca7f",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.34/WeComGroupSender_scripts_v1.1.34.zip"
-  }
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.35/WeComGroupSender_scripts_v1.1.35.zip"
+  },
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.35/WeComGroupSender_v1.1.35.exe",
+  "version": "1.1.35",
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/633220147"
+  ],
+  "notes": "# v1.1.35\n\n- 取消 A150 群名 OCR 校验，允许选择任意企微专用测试会话窗口。\n- 只需按一次 F8 选择窗口；输入框、发送按钮、消息区域自动定位，不再手动框选五个点。\n- 蓝色链接行几何位置结合 OCR 和整批发送顺序，补足个别字符漏识别；两帧范围重叠后保存中心相对坐标。\n- 窗口放大或缩小时自动重新定位，旧消息不会因此重发；未改变布局时直接点击已记录坐标。\n- 部分链接未定位不再停掉整轮；已定位的继续检测，网站对未定位项显示“未定位，未检测”。\n- 可点“自动重新定位”重学可见消息；不翻历史，不保存或上传截图。\n- 点击后仍须收到相应网址才判有效/无效。不改群发任务、账号连接及群发坐标。\n\n首次升级会自动迁移原已选测试窗口并重新学习旧消息；也可重新选择任意测试窗口。不要把所选窗口切换到业务会话。\n",
+  "sha256": "4052b56f6673fbd2d0afbdb2a08fa028f3bacff7563c8aafbd6c8d3277cda4c6"
 }
