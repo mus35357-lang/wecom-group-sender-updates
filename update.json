@@ -1,14 +1,14 @@
 {
-  "script": {
-    "sha256": "b8dd83f265e381b1c63d175a37d8838f68d649a4c65bd3d142890f5104ee609b",
-    "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.35/WeComGroupSender_scripts_v1.1.35.zip"
-  },
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.35/WeComGroupSender_v1.1.35.exe",
-  "version": "1.1.35",
+  "notes": "# v1.1.36\n\n- 网站链接有新增、删除或修改时，自动把当前全部链接重新发送到专用测试会话，一行一条，再重新定位整批链接。\n- 修复断线发生在“记录发送意图”与企微真正发出消息之间时，软件长期误用旧链接气泡的问题；恢复后先核对当前整批，缺失时自动重发一次。\n- 全部当前链接没有稳定定位完成前，不再领取网站检测批次，也不会生成部分“未定位、未检测”记录。\n- “自动重新定位”改为“重发全部链接并定位”，用于主动恢复当前整批；窗口仅改变大小时仍只重算坐标，不重发消息。\n- 发送后核对输入框已清空；发送按钮未生效时停止检测并保留明确提示。\n\n本版本通过自动化测试和离线构建验证；真实企微断线恢复效果需在对应虚拟机升级后现场确认。\n",
+  "version": "1.1.36",
+  "sha256": "99e0d27174b622d4793eb96477d10693d9a64594751e791d0c976449bb602dad",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.36/WeComGroupSender_v1.1.36.exe",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/633220147"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/646034307"
   ],
-  "notes": "# v1.1.35\n\n- 取消 A150 群名 OCR 校验，允许选择任意企微专用测试会话窗口。\n- 只需按一次 F8 选择窗口；输入框、发送按钮、消息区域自动定位，不再手动框选五个点。\n- 蓝色链接行几何位置结合 OCR 和整批发送顺序，补足个别字符漏识别；两帧范围重叠后保存中心相对坐标。\n- 窗口放大或缩小时自动重新定位，旧消息不会因此重发；未改变布局时直接点击已记录坐标。\n- 部分链接未定位不再停掉整轮；已定位的继续检测，网站对未定位项显示“未定位，未检测”。\n- 可点“自动重新定位”重学可见消息；不翻历史，不保存或上传截图。\n- 点击后仍须收到相应网址才判有效/无效。不改群发任务、账号连接及群发坐标。\n\n首次升级会自动迁移原已选测试窗口并重新学习旧消息；也可重新选择任意测试窗口。不要把所选窗口切换到业务会话。\n",
-  "sha256": "4052b56f6673fbd2d0afbdb2a08fa028f3bacff7563c8aafbd6c8d3277cda4c6"
+  "script": {
+    "runtime": "win7-py38-1",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.36/WeComGroupSender_scripts_v1.1.36.zip",
+    "sha256": "3fe75c0b4bf1a88b0cbce1059e81d92482676d8b41c17ab076db385d996f34b5"
+  }
 }
