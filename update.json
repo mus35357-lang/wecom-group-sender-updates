@@ -1,14 +1,14 @@
 {
-  "version": "1.1.37",
-  "notes": "# v1.1.37\n\n- 修复慢机器输入群编号后，搜索结果尚未刷新就立即点击保存坐标，导致未进入目标群却继续执行的问题。\n- 现在每个群都按“输入编号 → 回车触发搜索 → 搜索后等待 → 点击群坐标 → 进群后等待”的顺序执行。\n- 新增“搜索后等待（秒）”，默认 2 秒，允许 0.5～30 秒；慢机器可调到 2～3 秒，不影响收藏等其他步骤速度。\n- 原“进群后等待”继续保留，并且只发生在点击群坐标之后，两个等待不会混用。\n- 已记录群仍直接使用保存坐标，不恢复群名 OCR，不保存搜索截图。\n\n本版本已根据用户录像复核故障顺序，并通过自动化回归与离线构建验证；目标虚拟机上的真实逐群切换和发送仍以升级后的现场观察为准。\n",
-  "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/671086337"
-  ],
   "script": {
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.37/WeComGroupSender_scripts_v1.1.37.zip",
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.38/WeComGroupSender_scripts_v1.1.38.zip",
     "runtime": "win7-py38-1",
-    "sha256": "5acaece8a82ce19e5668401aab38b0e5dc05eab64fef71f0dca035a47c4ee949"
+    "sha256": "331c0f44b1520c221866e11a82046f93d18f5c2542f561d90a5bb6accb807bad"
   },
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.37/WeComGroupSender_v1.1.37.exe",
-  "sha256": "ddba8327c4880c2291cda71c933a8b96041b11a2ea6dad5362237423eaa9d14e"
+  "version": "1.1.38",
+  "urls": [
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/671152308"
+  ],
+  "notes": "# v1.1.38\n\n- 根据目标虚拟机实测，取消输入群编号后的回车：该版本企业微信不会因回车刷新搜索结果。\n- 输入完成后再次点击首次校准时保存的搜索框坐标，以鼠标点击触发结果刷新。\n- 保留独立“搜索后等待”，默认 2 秒；刷新完成后才点击已记录的群坐标，再执行原“进群后等待”。\n- 正式群发、快速识别检测和快速点击测试统一使用上述流程，不新增校准项。\n- 已记录群仍不做群名 OCR，不保存搜索截图。\n\n本版本已根据用户现场视频和手动验证修正触发方式，并通过自动化回归与离线构建验证；目标虚拟机上的真实逐群切换和发送仍以升级后的现场观察为准。\n",
+  "sha256": "632e642340fbd4d984f9f385dff279532e1b9d86590ee60f66c90c7ed03f569b",
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.38/WeComGroupSender_v1.1.38.exe"
 }
