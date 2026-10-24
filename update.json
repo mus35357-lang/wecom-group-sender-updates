@@ -1,14 +1,14 @@
 {
-  "notes": "# v1.1.36\n\n- 网站链接有新增、删除或修改时，自动把当前全部链接重新发送到专用测试会话，一行一条，再重新定位整批链接。\n- 修复断线发生在“记录发送意图”与企微真正发出消息之间时，软件长期误用旧链接气泡的问题；恢复后先核对当前整批，缺失时自动重发一次。\n- 全部当前链接没有稳定定位完成前，不再领取网站检测批次，也不会生成部分“未定位、未检测”记录。\n- “自动重新定位”改为“重发全部链接并定位”，用于主动恢复当前整批；窗口仅改变大小时仍只重算坐标，不重发消息。\n- 发送后核对输入框已清空；发送按钮未生效时停止检测并保留明确提示。\n\n本版本通过自动化测试和离线构建验证；真实企微断线恢复效果需在对应虚拟机升级后现场确认。\n",
-  "version": "1.1.36",
-  "sha256": "99e0d27174b622d4793eb96477d10693d9a64594751e791d0c976449bb602dad",
-  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.36/WeComGroupSender_v1.1.36.exe",
+  "version": "1.1.37",
+  "notes": "# v1.1.37\n\n- 修复慢机器输入群编号后，搜索结果尚未刷新就立即点击保存坐标，导致未进入目标群却继续执行的问题。\n- 现在每个群都按“输入编号 → 回车触发搜索 → 搜索后等待 → 点击群坐标 → 进群后等待”的顺序执行。\n- 新增“搜索后等待（秒）”，默认 2 秒，允许 0.5～30 秒；慢机器可调到 2～3 秒，不影响收藏等其他步骤速度。\n- 原“进群后等待”继续保留，并且只发生在点击群坐标之后，两个等待不会混用。\n- 已记录群仍直接使用保存坐标，不恢复群名 OCR，不保存搜索截图。\n\n本版本已根据用户录像复核故障顺序，并通过自动化回归与离线构建验证；目标虚拟机上的真实逐群切换和发送仍以升级后的现场观察为准。\n",
   "urls": [
-    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/646034307"
+    "https://api.github.com/repos/mus35357-lang/wecom-group-sender-updates/releases/assets/671086337"
   ],
   "script": {
+    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.37/WeComGroupSender_scripts_v1.1.37.zip",
     "runtime": "win7-py38-1",
-    "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.36/WeComGroupSender_scripts_v1.1.36.zip",
-    "sha256": "3fe75c0b4bf1a88b0cbce1059e81d92482676d8b41c17ab076db385d996f34b5"
-  }
+    "sha256": "5acaece8a82ce19e5668401aab38b0e5dc05eab64fef71f0dca035a47c4ee949"
+  },
+  "url": "https://github.com/mus35357-lang/wecom-group-sender-updates/releases/download/v1.1.37/WeComGroupSender_v1.1.37.exe",
+  "sha256": "ddba8327c4880c2291cda71c933a8b96041b11a2ea6dad5362237423eaa9d14e"
 }
